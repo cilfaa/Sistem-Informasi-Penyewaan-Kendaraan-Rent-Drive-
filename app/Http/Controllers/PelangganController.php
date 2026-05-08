@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class PelangganController extends Controller {
-
     public function index() {
         $datas = DB::select('SELECT * FROM pelanggan ORDER BY id_pelanggan DESC');
         return view('pelanggan.index')->with('datas', $datas);
